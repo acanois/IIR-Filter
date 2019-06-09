@@ -34,6 +34,11 @@ private:
     
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> mCutoffAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> mQualityAttachment;
+    
+    // Menu
+    ScopedPointer<ComboBox> mFilterBox;
+    ScopedPointer<AudioProcessorValueTreeState::ComboBoxAttachment> mFilterType;
+    
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (InfiniteIrfilterAudioProcessorEditor)
 };

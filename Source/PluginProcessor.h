@@ -68,5 +68,7 @@ private:
     
     double mSampleRate { 44100 };
     
+    int mFilterChoice { 1 };
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (InfiniteIrfilterAudioProcessor)
 };

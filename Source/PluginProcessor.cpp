@@ -24,10 +24,12 @@ InfiniteIrfilterAudioProcessor::InfiniteIrfilterAudioProcessor()
                        ),
 #endif
         mStateTree (*this, nullptr, "ParameterState", {
-            std::make_unique<AudioParameterFloat> ("cutoff", "Cutoff",
-                NormalisableRange<float> (20.0f, 20000.0f, 0.001f), mCutoff),
+                std::make_unique<AudioParameterFloat> ("cutoff", "Cutoff",
+                    NormalisableRange<float> (20.0f, 20000.0f, 0.001f), mCutoff),
                 std::make_unique<AudioParameterFloat> ("quality", "Quality",
-                NormalisableRange<float> (0.001f, 0.9f, 0.001f), mQuality),
+                    NormalisableRange<float> (0.001f, 0.9f, 0.001f), mQuality),
+                std::make_unique<AudioParameterInt> ("filterType", "FilterType",
+                    1, 3, mFilterChoice),
             })
         {
 }
