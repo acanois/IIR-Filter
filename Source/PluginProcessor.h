@@ -63,12 +63,12 @@ private:
     
     dsp::ProcessorDuplicator <dsp::IIR::Filter<float>, dsp::IIR::Coefficients <float>> mLowPass;
     
-    float mCutoff  { 5000.0f };
-    float mQuality { 0.1f    };
+    float mCutoff      { 5000.0f };
+    float mQuality     { 0.1f    };
     
-    double mSampleRate { 44100 };
+    double mSampleRate { 44100   };
     
-    int mFilterChoice { 1 };
+    int mFilterChoice  { 1       };
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (InfiniteIrfilterAudioProcessor)
 };
